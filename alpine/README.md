@@ -19,16 +19,14 @@ cd ~/docker-lighttpd
 
 docker rm -f lighttpd
 
-docker run -d -v "${pwd}"/var-www/html:/var/www/localhost/htdocs -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
+docker run -d -v "$(pwd)"/var-www/html:/var/www/localhost/htdocs -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
 
 
 ````
 
 ## Start interactively
 ````
-docker rm -f lighttpd; docker run -it -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd bash
-
-lighttpd -g "daemon off;"
+docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd sh
 
 exit
 
