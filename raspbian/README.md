@@ -4,10 +4,10 @@
 
 ````
 cd ~
-rm -rf docker-nginx
-git clone https://github.com/sejnub/docker-nginx.git
-cd ~/docker-nginx 
-docker build -f raspbian/Dockerfile -t sejnub/nginx .
+rm -rf docker-lighttpd
+git clone https://github.com/sejnub/docker-lighttpd.git
+cd ~/docker-lighttpd 
+docker build -f raspbian/Dockerfile -t sejnub/lighttpd .
 ````
 
 
@@ -15,14 +15,14 @@ docker build -f raspbian/Dockerfile -t sejnub/nginx .
 
 ## Just to see if it starts
 ````
-docker rm -f nginx; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name nginx sejnub/nginx
+docker rm -f lighttpd; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
 ````
 
 ## Start interactively
 ````
-docker rm -f nginx; docker run -it -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name nginx sejnub/nginx bash
+docker rm -f lighttpd; docker run -it -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd bash
 
-nginx -g "daemon off;"
+lighttpd -g "daemon off;"
 
 exit
 
@@ -31,12 +31,12 @@ exit
 ## Attach
 
 ````
-docker exec -it nginx /bin/bash
+docker exec -it lighttpd /bin/bash
 ````
 
 ## xxxxx
 ````
-docker rm -f nginx; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name nginx sejnub/nginx
+docker rm -f lighttpd; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
 ````
 
 
