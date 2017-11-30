@@ -7,7 +7,7 @@ RUN apk add --update lighttpd \
 RUN mkdir -p /var/cache/lighttpd/compress/ \
  && chown -R lighttpd /var/cache/lighttpd/compress/
 
-COPY lighttpd.conf /etc/lighttpd/lighttpd.conf
+COPY alpine/conf/lighttpd.conf /etc/lighttpd/lighttpd.conf
 
 EXPOSE 80
 
