@@ -1,1 +1,1 @@
-# docker-nginx
+# docker-lighttpd
