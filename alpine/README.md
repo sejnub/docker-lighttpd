@@ -7,7 +7,7 @@ cd ~
 rm -rf docker-lighttpd
 git clone https://github.com/sejnub/docker-lighttpd.git
 cd ~/docker-lighttpd 
-docker build -f raspbian/Dockerfile -t sejnub/lighttpd .
+docker build -f alpine/Dockerfile -t sejnub/lighttpd .
 ````
 
 
