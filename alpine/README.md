@@ -35,7 +35,7 @@ exit
 ## Attach
 
 ````
-docker exec -it lighttpd /bin/bash
+docker exec -it lighttpd /bin/sh
 ````
 
 ## xxxxx
