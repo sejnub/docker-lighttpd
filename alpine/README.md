@@ -15,7 +15,13 @@ docker build -f alpine/Dockerfile -t sejnub/lighttpd .
 
 ## Just to see if it starts
 ````
-docker rm -f lighttpd; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
+cd ~/docker-lighttpd 
+
+docker rm -f lighttpd
+
+docker run -d -v ./var-www/html:/var/www/localhost/htdocs -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
+
+
 ````
 
 ## Start interactively
