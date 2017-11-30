@@ -9,6 +9,17 @@ RUN mkdir -p /var/cache/lighttpd/compress/ \
 
 COPY alpine/conf/lighttpd.conf /etc/lighttpd/lighttpd.conf
 
+
+RUN apk add --update lighttpd 
+
+RUN apk add --update jq             && \
+    apk add --update openssh-client && \    
+    apk add --update sshpass       
+
+RUN rm -rf /var/cache/apk/*
+
+
+
 EXPOSE 80
 
 VOLUME /var/www/localhost
