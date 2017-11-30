@@ -19,7 +19,7 @@ cd ~/docker-lighttpd
 
 docker rm -f lighttpd
 
-docker run -d -v ./var-www/html:/var/www/localhost/htdocs -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
+docker run -d -v "${pwd}"/var-www/html:/var/www/localhost/htdocs -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
 
 
 ````
