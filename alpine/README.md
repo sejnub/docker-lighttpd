@@ -51,6 +51,8 @@ lighttpd -D -f /etc/lighttpd/lighttpd.conf
 ````
 docker exec -it lighttpd /bin/sh
 
+tail /var/log/lighttpd/*
+
 ````
 
 ## xxxxx
