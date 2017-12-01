@@ -4,8 +4,10 @@ MAINTAINER Daniel S.
 RUN apk add --update lighttpd \
  && rm -rf /var/cache/apk/*
 
-RUN mkdir -p /var/cache/lighttpd/compress/ \
- && chown -R lighttpd /var/cache/lighttpd/compress/
+# HB: Enable this later, when starting to use compress
+# RUN mkdir -p /var/cache/lighttpd/compress/ \
+#  && chown -R lighttpd /var/cache/lighttpd/compress/
+
 
 RUN apk add --update lighttpd       && \
     apk add --update jq             && \
