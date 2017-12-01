@@ -10,7 +10,10 @@ RUN apk add --update bash           && \
 
 
 
-#COPY var-www/cgi-bin/         /var/www/localhost/
+
+COPY var-www/cgi-bin/         /var/www/localhost/cgi-bin
+
+
 #RUN chown -R lighttpd         /var/www/localhost/cgi-bin/
 #RUN chmod -R ug+x             /var/www/localhost/cgi-bin/*
 
