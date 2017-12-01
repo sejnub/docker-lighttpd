@@ -37,3 +37,5 @@ COPY var-www/cgi-bin/*         /var/www/localhost/cgi-bin/
 RUN chown -R lighttpd          /var/www/localhost/cgi-bin/
 RUN chmod ug+x                 /var/www/localhost/cgi-bin/*
 
+
+
