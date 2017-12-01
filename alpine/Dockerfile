@@ -22,4 +22,5 @@ VOLUME /var/www/localhost
 
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 
-# COPY alpine/conf/lighttpd.conf /etc/lighttpd/lighttpd.conf
+COPY alpine/conf/lighttpd.conf /etc/lighttpd
+COPY alpine/conf/mod_cgi.conf  /etc/lighttpd
