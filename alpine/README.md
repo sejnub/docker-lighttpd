@@ -1,3 +1,7 @@
+# Thanks
+
+This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastrasmue/rpi-lighttpd)
+
 # TODO
 
 - Currently the logs are not forwarded to docker like they should be. Fix that!
