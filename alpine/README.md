@@ -1,6 +1,7 @@
 # Thanks
 
-This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastrasmue/rpi-lighttpd)
+This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastrasmue/rpi-lighttpd). 
+Thank you dastrasmue!
 
 # TODO
 
