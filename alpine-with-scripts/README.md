@@ -4,6 +4,8 @@ This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastras
 Thank you dastrasmue!
 
 # TODO
+- Make environment variables from env-file accessible tocgi script
+  - https://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv
 
 
 # Links
