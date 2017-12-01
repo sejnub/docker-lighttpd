@@ -12,11 +12,24 @@ Thank you dastrasmue!
 # Build
 
 ````
+
 cd ~
 rm -rf docker-lighttpd
 git clone https://github.com/sejnub/docker-lighttpd.git
+
+
+cd ~/docker-lighttpd
+git clone https://github.com/sejnub/unifi-tools.git
+
+mkdir ~/docker-lighttpd/var-www/cgi-bin/add-dns
+cp ~/docker-lighttpd/unifi-tools/add-dns/* ~/docker-lighttpd/var-www/cgi-bin/add-dns
+
+
+
 cd ~/docker-lighttpd 
 docker build -f alpine-with-scripts/Dockerfile -t sejnub/lighttpd:rpi-alpine-with-scripts .
+
+
 ````
 
 
