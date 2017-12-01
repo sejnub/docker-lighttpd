@@ -14,13 +14,18 @@ RUN apk add --update lighttpd       && \
 
 RUN rm -rf /var/cache/apk/*
 
-
-
 EXPOSE 80
 
 VOLUME /var/www/localhost
 
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 
+######## The coming lines should be moved to lower line numbers as soon as they are stable
+
 COPY alpine/conf/lighttpd.conf /etc/lighttpd
 COPY alpine/conf/mod_cgi.conf  /etc/lighttpd
+
+RUN mkdir /var/www/localhost/cgi-bin
+
+COPY alpine/cgi-bin/* /var/www/localhost/cgi-bin
+
