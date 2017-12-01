@@ -7,9 +7,6 @@ RUN apk add --update lighttpd \
 RUN mkdir -p /var/cache/lighttpd/compress/ \
  && chown -R lighttpd /var/cache/lighttpd/compress/
 
-COPY alpine/conf/lighttpd.conf /etc/lighttpd/lighttpd.conf
-
-
 RUN apk add --update lighttpd       && \
     apk add --update jq             && \
     apk add --update openssh-client && \    
@@ -24,3 +21,5 @@ EXPOSE 80
 VOLUME /var/www/localhost
 
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
+
+COPY alpine/conf/lighttpd.conf /etc/lighttpd/lighttpd.conf
