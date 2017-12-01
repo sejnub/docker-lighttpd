@@ -8,6 +8,7 @@ Thank you dastrasmue!
 - Currently the logs are not forwarded to docker like they should be. Fix that!
   - https://redmine.lighttpd.net/issues/2731
 - Make mod_cgi work!
+  - https://redmine.lighttpd.net/projects/1/wiki/docs_modcgi
 
 
 # Build
