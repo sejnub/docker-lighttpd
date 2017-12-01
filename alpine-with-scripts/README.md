@@ -56,6 +56,10 @@ lighttpd -D -f /etc/lighttpd/lighttpd.conf
 ````
 docker exec -it lighttpd /bin/sh
 
+cd /var/www/localhost/cgi-bin/add-dns/
+ls -al
+
+
 tail -f /var/log/lighttpd/*
 
 ````
