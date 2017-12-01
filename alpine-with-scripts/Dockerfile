@@ -7,7 +7,8 @@ RUN apk add --update bash           && \
     apk add --update curl           && \
     apk add --update jq             && \
     apk add --update openssh-client && \    
-    apk add --update sshpass       
+    apk add --update sshpass        && \
+    apk add --update nano       
 
 
 RUN rm -rf /var/cache/apk/*
