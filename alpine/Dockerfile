@@ -24,6 +24,11 @@ CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 
 COPY alpine/conf/lighttpd.conf /etc/lighttpd
 COPY alpine/conf/mod_cgi.conf  /etc/lighttpd
+COPY var-www/html/*            /var/www/localhost/htdocs
+COPY var-www/html/*            /var/www/localhost/htdocs
+
+
+"$(pwd)"/var-www/html:/var/www/localhost/htdocs
 
 RUN mkdir /var/www/localhost/cgi-bin
 
