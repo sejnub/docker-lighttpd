@@ -7,8 +7,16 @@ Thank you dastrasmue!
 
 - Currently the logs are not forwarded to docker like they should be. Fix that!
   - https://redmine.lighttpd.net/issues/2731
+
 - Make mod_cgi work!
   - https://redmine.lighttpd.net/projects/1/wiki/docs_modcgi
+
+- Have a look at mod_expire. For this also look at the lighttpd.old.conf which came with  [dastrasmue/rpi-lighttpd](https://github.com/dastrasmue/rpi-lighttpd)!
+
+- Have a look at lighttpd.old.conf for the other diffs, which are
+  - workaround for bug preventing sync between VirtualBox and host
+  - mod_compress
+
 
 
 # Build
