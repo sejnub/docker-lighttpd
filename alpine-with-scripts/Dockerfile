@@ -4,11 +4,13 @@ FROM sejnub/lighttpd:rpi-alpine
 # For unifi-tools/add-dns
 
 RUN apk add --update bash           && \
+    apk add --update curl           && \
     apk add --update jq             && \
     apk add --update openssh-client && \    
     apk add --update sshpass       
 
 
+RUN rm -rf /var/cache/apk/*
 
 
 COPY var-www/cgi-bin/         /var/www/localhost/cgi-bin
