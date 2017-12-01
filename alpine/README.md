@@ -28,18 +28,13 @@ docker build -f alpine/Dockerfile -t sejnub/lighttpd .
 ````
 cd ~/docker-lighttpd 
 
-docker rm -f lighttpd
-
-docker run -d -v "$(pwd)"/var-www/html:/var/www/localhost/htdocs -v "$(pwd)"/alpine/conf:/etc/lighttpd -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
-
+docker rm -f lighttpd; docker run -d -v "$(pwd)"/var-www/html:/var/www/localhost/htdocs -v "$(pwd)"/alpine/conf:/etc/lighttpd -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
 
 ````
 
 ## Start interactively
 ````
-docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd sh
-
-exit
+docker rm -f lighttpd; docker run -it -v "$(pwd)"/var-www/html:/var/www/localhost/htdocs -v "$(pwd)"/alpine/conf:/etc/lighttpd -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd /bin/sh
 
 ````
 
@@ -47,11 +42,13 @@ exit
 
 ````
 docker exec -it lighttpd /bin/sh
+
 ````
 
 ## xxxxx
 ````
 docker rm -f lighttpd; docker run -d -p 80:80 -p 443:443 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd
+
 ````
 
 
