@@ -4,8 +4,10 @@ This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastras
 Thank you dastrasmue!
 
 # TODO
-- Make environment variables from env-file accessible tocgi script
+- Make environment variables from env-file accessible to the cgi script
   - https://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv
+- looks like here we have to set the executable flag to the filed in cgi-bin again
+- Idea: In cgi-bin are only executables, if an executable needs additional files (like add-dns) these are in one subdirectory per executable (or maybe some similar executables which need the same resources
 
 
 # Links
