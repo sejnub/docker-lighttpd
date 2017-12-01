@@ -9,10 +9,7 @@ RUN apk add --update lighttpd \
 #  && chown -R lighttpd /var/cache/lighttpd/compress/
 
 
-RUN apk add --update lighttpd       && \
-    apk add --update jq             && \
-    apk add --update openssh-client && \    
-    apk add --update sshpass       
+RUN apk add --update lighttpd    
 
 RUN rm -rf /var/cache/apk/*
 
