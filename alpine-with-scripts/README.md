@@ -39,11 +39,11 @@ docker build -f alpine-with-scripts/Dockerfile -t sejnub/lighttpd:rpi-alpine-wit
 
 # Run
 
-## Just to see if it starts
+## Start detached
 ````
 cd ~/docker-lighttpd 
 
-docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine-with-scripts
+docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env -v /usr/local/etc/sejnub-credentials.env:/usr/local/etc/credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine-with-scripts
 
 ````
 
