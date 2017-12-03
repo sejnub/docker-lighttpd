@@ -49,7 +49,7 @@ docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-
 
 ## Start interactively
 ````
-docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine-with-scripts /bin/sh
+docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env -v /usr/local/etc/sejnub-credentials.env:/usr/local/etc/credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine-with-scripts /bin/sh
 
 lighttpd -D -f /etc/lighttpd/lighttpd.conf
 
