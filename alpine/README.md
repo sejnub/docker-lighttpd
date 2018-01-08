@@ -24,7 +24,7 @@ cd ~
 rm -rf docker-lighttpd
 git clone https://github.com/sejnub/docker-lighttpd.git
 cd ~/docker-lighttpd 
-docker build -f alpine/Dockerfile -t sejnub/lighttpd:rpi-alpine .
+docker build -f alpine/Dockerfile -t sejnub/lighttpd:alpine .
 ````
 
 
@@ -34,13 +34,13 @@ docker build -f alpine/Dockerfile -t sejnub/lighttpd:rpi-alpine .
 ````
 cd ~/docker-lighttpd 
 
-docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine
+docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:alpine
 
 ````
 
 ## Start interactively
 ````
-docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine /bin/sh
+docker rm -f lighttpd; docker run -it -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env --name lighttpd sejnub/lighttpd:alpine /bin/sh
 
 lighttpd -D -f /etc/lighttpd/lighttpd.conf
 

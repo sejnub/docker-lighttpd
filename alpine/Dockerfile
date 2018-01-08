@@ -1,4 +1,4 @@
-FROM hypriot/alpine
+FROM alpine
 MAINTAINER Daniel S.
 
 RUN apk add --update lighttpd \
