@@ -33,7 +33,7 @@ cp ~/docker-lighttpd/unifi-tools/add-dns/* ~/docker-lighttpd/var-www/cgi-bin/add
 
 
 cd ~/docker-lighttpd 
-docker build -f alpine-with-scripts/Dockerfile -t sejnub/lighttpd:rpi-alpine-with-scripts .
+docker build -f rpi-alpine-with-scripts/Dockerfile -t sejnub/lighttpd:rpi-alpine-with-scripts .
 
 
 ````
