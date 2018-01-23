@@ -18,6 +18,7 @@ Thank you dastrasmue!
 # Build
 
 ````
+Build lighttpd:rpi-alpine! Description is in other folder of this repository.
 
 cd ~
 rm -rf docker-lighttpd
