@@ -15,9 +15,10 @@ Thank you dastrasmue!
 # Links
 
 
-# Build
+# Build and run detached
 
 ````
+## Build
 Build lighttpd:rpi-alpine! Description is in other folder of this repository.
 
 cd ~
@@ -36,19 +37,14 @@ cp ~/docker-lighttpd/unifi-tools/add-dns/* ~/docker-lighttpd/var-www/cgi-bin/add
 cd ~/docker-lighttpd 
 docker build -f rpi-alpine-with-scripts/Dockerfile -t sejnub/lighttpd:rpi-alpine-with-scripts .
 
-
-````
-
-
-# Run
-
 ## Start detached
-````
+
 cd ~/docker-lighttpd 
 
 docker rm -f lighttpd; docker run -d  -p 80:80 --env-file /usr/local/etc/sejnub-credentials.env -v /usr/local/etc/sejnub-credentials.env:/usr/local/etc/credentials.env --name lighttpd sejnub/lighttpd:rpi-alpine-with-scripts
 
 ````
+
 
 ## Start interactively
 ````
