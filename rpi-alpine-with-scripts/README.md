@@ -19,7 +19,6 @@ Thank you dastrasmue!
 
 ````
 ## Build
-Build lighttpd:rpi-alpine! Description is in other folder of this repository.
 
 cd ~
 rm -rf docker-lighttpd
@@ -31,7 +30,6 @@ git clone https://github.com/sejnub/unifi-tools.git
 
 mkdir ~/docker-lighttpd/var-www/cgi-bin/add-dns
 cp ~/docker-lighttpd/unifi-tools/add-dns/* ~/docker-lighttpd/var-www/cgi-bin/add-dns
-
 
 
 cd ~/docker-lighttpd 
