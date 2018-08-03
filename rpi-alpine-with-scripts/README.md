@@ -3,7 +3,7 @@
 This repository is based on [dastrasmue/rpi-lighttpd](https://github.com/dastrasmue/rpi-lighttpd). 
 Thank you dastrasmue!
 
-# TODO
+## TODO
 - Make environment variables from env-file accessible to the cgi script
 
   - https://redmine.lighttpd.net/projects/1/wiki/Docs_ModSetEnv
@@ -11,11 +11,11 @@ Thank you dastrasmue!
 - looks like here we have to set the executable flag to the filed in cgi-bin again
 - Idea: In cgi-bin are only executables, if an executable needs additional files (like add-dns) these are in one subdirectory per executable (or maybe some similar executables which need the same resources
 
+## Build and run detached
 
-# Links
+- First you have to build sejnub/lighttpd:rpi-alpine. Do it as describe at <https://github.com/sejnub/docker-lighttpd/tree/master/rpi-alpine>
 
-
-# Build and run detached
+- Now execute the following
 
 ````
 ## Build
