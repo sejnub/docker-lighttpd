@@ -18,7 +18,10 @@ Thank you dastrasmue!
 - Now execute the following
 
 ````
+## Precondition: The imaga sejnub/lighttpd:rpi-alpine exists.
+
 ## Build
+
 
 cd ~
 rm -rf docker-lighttpd
